@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JC Profectus GmbH i.G. – Chris & Joerg</title>
+<meta name="description" content="JC Profectus – Progress and success, custom-delivered by Joerg and Chris. Two entrepreneurial executives with a proven track record: three successful exits at F24 AG.">
+<meta property="og:title" content="JC Profectus – Chris & Joerg">
+<meta property="og:description" content="Progress and success, custom-delivered by Joerg and Chris.">
+<meta property="og:type" content="website">
+<style>
+@import url("data:text/css,");
+/* System font fallbacks */
+</style>
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --black:  #0C0C0C;
+  --white:  #F5F3EE;
+  --gold:   #C9A84C;
+  --gold2:  #E8C97A;
+  --slate:  #1A1F2E;
+  --mid:    #6B7280;
+  --accent: #E05C3A;
+}
+
+html { scroll-behavior: auto; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  background: var(--black);
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+/* ── HERO ── */
+#hero, #cover {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 40px;
+  position: relative;
+  overflow: hidden;
+  background: var(--black);
+}
+
+#hero::before, #cover::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 50% 0%, rgba(201,168,76,.18) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 40% at 10% 80%, rgba(224,92,58,.12) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 60% at 90% 60%, rgba(201,168,76,.1) 0%, transparent 60%);
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(201,168,76,.12);
+  border: 1px solid rgba(201,168,76,.3);
+  border-radius: 100px;
+  padding: 8px 20px;
+  font-size: .8rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 40px;
+  position: relative;
+  
+}
+
+.hero-badge::before {
+  content: '';
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+  animation: blink 1.8s ease-in-out infinite;
+}
+
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.2} }
+
+.hero-names {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(4rem, 12vw, 10rem);
+  font-weight: 900;
+  line-height: .95;
+  color: var(--white);
+  position: relative;
+  
+}
+
+.hero-names span {
+  display: block;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold2) 50%, var(--gold) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-tagline {
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  font-weight: 300;
+  color: rgba(245,243,238,.55);
+  max-width: 580px;
+  line-height: 1.7;
+  margin-top: 32px;
+  position: relative;
+  
+}
+
+.hero-tagline strong { color: var(--gold); font-weight: 600; }
+
+.hatrick-badge {
+  margin-top: 48px;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  
+}
+
+.exit-pill {
+  background: rgba(201,168,76,.1);
+  border: 1px solid rgba(201,168,76,.25);
+  border-radius: 12px;
+  padding: 14px 24px;
+  text-align: center;
+}
+
+.exit-pill .year { font-size: .75rem; color: var(--gold); letter-spacing: .12em; text-transform: uppercase; }
+.exit-pill .label { font-family: Georgia, 'Times New Roman', serif; font-size: 1.1rem; font-weight: 700; color: var(--white); margin-top: 4px; }
+
+.scroll-cue {
+  position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%);
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+  color: rgba(245,243,238,.25); font-size: .72rem; letter-spacing: .15em; text-transform: uppercase;
+  
+}
+
+.scroll-line {
+  width: 1px; height: 48px;
+  background: linear-gradient(to bottom, var(--gold), transparent);
+  
+}
+
+@keyframes drip { 0%,100%{opacity:.4;transform:scaleY(1)} 50%{opacity:1;transform:scaleY(1.2)} }
+@keyframes fadeUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
+
+/* ── SECTION SHARED ── */
+section { min-height: 100vh; padding: 110px 40px; display: flex; align-items: center; position: relative; overflow: hidden; }
+.inner { max-width: 1100px; margin: 0 auto; width: 100%; }
+
+.sec-eyebrow {
+  font-size: .78rem; letter-spacing: .2em; text-transform: uppercase;
+  color: var(--gold); font-weight: 500; margin-bottom: 16px;
+  display: flex; align-items: center; gap: 12px;
+}
+.sec-eyebrow::after { content: ''; flex: 0 0 40px; height: 1px; background: var(--gold); opacity: .5; }
+
+.sec-heading {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(2.2rem, 6vw, 4.5rem);
+  font-weight: 900; line-height: 1.05;
+  color: var(--white);
+  margin-bottom: 0;
+}
+
+.sec-heading em { font-style: normal; color: var(--gold); }
+
+/* ── WHO WE ARE ── */
+#who { background: var(--slate); }
+
+#who::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 60% 60% at 100% 0%, rgba(201,168,76,.08) 0%, transparent 60%);
+}
+
+.who-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+  margin-top: 60px;
+}
+
+@media(max-width:760px){ .who-layout{ grid-template-columns:1fr; gap:48px; } }
+
+.who-text { }
+.who-text p {
+  font-size: 1.1rem; color: rgba(245,243,238,.7); line-height: 1.8; font-weight: 300;
+  margin-bottom: 28px;
+}
+
+.who-text p strong { color: var(--white); font-weight: 600; }
+
+.person-cards { display: flex; flex-direction: column; gap: 20px; }
+
+.person-card {
+  background: rgba(201,168,76,.07);
+  border: 1px solid rgba(201,168,76,.15);
+  border-radius: 16px;
+  padding: 28px 28px;
+  opacity: 1; transform: translateX(0);
+  transition: opacity .6s ease, transform .6s ease, background .3s;
+}
+
+.person-card:hover { background: rgba(201,168,76,.13); }
+.person-card.visible { opacity: 1; transform: translateX(0); }
+
+.person-name {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.5rem; font-weight: 700;
+  color: var(--white); margin-bottom: 6px;
+}
+
+.person-role { font-size: .85rem; color: var(--gold); letter-spacing: .1em; text-transform: uppercase; }
+
+/* ── TIMELINE ── */
+#story { background: var(--black); }
+
+.tl-wrap {
+  position: relative;
+  margin-top: 70px;
+  padding-left: 24px;
+}
+
+.tl-wrap::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0; width: 2px;
+  background: linear-gradient(to bottom, var(--gold), rgba(201,168,76,.1));
+}
+
+.tl-entry {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 32px;
+  padding: 32px 0;
+  position: relative;
+  opacity: 1; transform: translateY(0);
+  transition: opacity .5s ease, transform .5s ease;
+  border-bottom: 1px solid rgba(255,255,255,.05);
+}
+
+.tl-entry:last-child { border-bottom: none; }
+.tl-entry.visible { opacity: 1; transform: translateY(0); }
+
+.tl-entry::before {
+  content: '';
+  position: absolute;
+  left: -29px; top: 38px;
+  width: 12px; height: 12px;
+  border-radius: 50%;
+  background: var(--gold);
+  border: 2px solid var(--black);
+  box-shadow: 0 0 0 3px rgba(201,168,76,.3);
+}
+
+.tl-year {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.6rem; font-weight: 700;
+  color: var(--gold); line-height: 1;
+  padding-top: 4px;
+}
+
+.tl-events { display: flex; flex-direction: column; gap: 10px; }
+
+.tl-event {
+  background: rgba(255,255,255,.03);
+  border-left: 2px solid rgba(201,168,76,.3);
+  padding: 10px 16px;
+  border-radius: 0 8px 8px 0;
+}
+
+.tl-event.highlight {
+  background: rgba(201,168,76,.1);
+  border-left-color: var(--gold);
+}
+
+.tl-event.exit-event {
+  background: rgba(201,168,76,.12);
+  border-left-color: var(--gold);
+}
+
+.tl-event h4 {
+  font-size: 1rem; font-weight: 600; color: var(--white); margin-bottom: 2px;
+}
+
+.tl-event.exit-event h4 { color: var(--gold); }
+.tl-event p { font-size: .88rem; color: rgba(245,243,238,.5); line-height: 1.5; }
+
+.exit-tag {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--black);
+  font-size: .7rem; font-weight: 600;
+  letter-spacing: .1em; text-transform: uppercase;
+  padding: 3px 10px; border-radius: 100px;
+  margin-bottom: 6px;
+}
+
+/* ── NUMBERS ── */
+#numbers { background: var(--slate); }
+
+#numbers::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 70% 50% at 50% 100%, rgba(201,168,76,.06) 0%, transparent 70%);
+}
+
+.numbers-table-wrap {
+  margin-top: 60px;
+  overflow-x: auto;
+  position: relative;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+
+thead tr {
+  border-bottom: 2px solid rgba(201,168,76,.4);
+}
+
+thead th {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: .78rem; font-weight: 600;
+  letter-spacing: .14em; text-transform: uppercase;
+  color: var(--gold);
+  padding: 14px 20px;
+  text-align: left;
+}
+
+tbody tr {
+  border-bottom: 1px solid rgba(255,255,255,.06);
+  opacity: 1; transform: translateY(0);
+  transition: opacity .4s ease, transform .4s ease, background .2s;
+}
+
+tbody tr.visible { opacity: 1; transform: translateY(0); }
+tbody tr:hover { background: rgba(201,168,76,.05); }
+
+td {
+  padding: 20px 20px;
+  vertical-align: middle;
+}
+
+.td-category {
+  font-weight: 600; font-size: 1rem;
+  color: var(--white);
+}
+
+.td-val {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.4rem; font-weight: 700;
+  color: var(--gold);
+}
+
+.td-val.big { font-size: 1.8rem; }
+
+.td-comment {
+  font-size: .88rem; color: rgba(245,243,238,.5);
+  line-height: 1.5; max-width: 260px;
+}
+
+.growth-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(201,168,76,.12); border: 1px solid rgba(201,168,76,.25);
+  border-radius: 8px; padding: 4px 10px;
+  font-size: .85rem; font-weight: 600; color: var(--gold2);
+}
+
+/* ── VALUE CREATION ── */
+#value { background: var(--black); }
+
+.levers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 60px;
+}
+
+.lever {
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 14px;
+  padding: 28px 24px;
+  opacity: 1; transform: translateY(0);
+  transition: opacity .5s ease, transform .5s ease, border-color .3s, background .3s;
+  cursor: default;
+}
+
+.lever:hover {
+  border-color: rgba(201,168,76,.4);
+  background: rgba(201,168,76,.06);
+}
+
+.lever.visible { opacity: 1; transform: translateY(0); }
+
+.lever-icon { font-size: 1.8rem; margin-bottom: 14px; }
+.lever h3 { font-size: 1rem; font-weight: 600; color: var(--white); margin-bottom: 6px; }
+.lever p { font-size: .85rem; color: rgba(245,243,238,.45); line-height: 1.5; }
+
+/* ── REFERENCES ── */
+#references { background: var(--slate); }
+
+.ref-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-top: 60px;
+}
+
+.ref-card {
+  background: rgba(12,12,12,.5);
+  border: 1px solid rgba(201,168,76,.15);
+  border-radius: 18px;
+  padding: 36px 32px;
+  opacity: 1; transform: translateY(0);
+  transition: opacity .6s ease, transform .6s ease, border-color .3s;
+}
+
+.ref-card:hover { border-color: rgba(201,168,76,.4); }
+.ref-card.visible { opacity: 1; transform: translateY(0); }
+
+.ref-quote {
+  font-size: 1.05rem; font-style: italic;
+  color: rgba(245,243,238,.75); line-height: 1.7;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+.ref-quote::before {
+  content: '\201C';
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 4rem; line-height: 0;
+  color: rgba(201,168,76,.25);
+  position: absolute; top: 14px; left: -10px;
+}
+
+.ref-name {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.1rem; font-weight: 700;
+  color: var(--white); margin-bottom: 4px;
+}
+
+.ref-title { font-size: .82rem; color: var(--gold); letter-spacing: .08em; }
+
+/* ── CLOSING ── */
+#closing {
+  min-height: 100vh;
+  background: var(--black);
+  display: flex; align-items: center; justify-content: center;
+  text-align: center; padding: 80px 40px;
+  position: relative; overflow: hidden;
+}
+
+#closing::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 50%, rgba(201,168,76,.1) 0%, transparent 65%);
+  
+}
+
+@keyframes glow { 0%{opacity:.5} 100%{opacity:1} }
+
+.closing-inner { position: relative; max-width: 800px; }
+
+.closing-title {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: clamp(3rem, 10vw, 8rem);
+  font-weight: 900;
+  line-height: .95;
+  color: var(--white);
+  opacity: 1; transform: translateY(0);
+  transition: opacity .8s ease .2s, transform .8s ease .2s;
+}
+
+.closing-title span {
+  background: linear-gradient(135deg, var(--gold), var(--gold2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.closing-sub {
+  font-size: clamp(1rem, 2.2vw, 1.3rem);
+  color: rgba(245,243,238,.5); line-height: 1.7;
+  margin-top: 28px; max-width: 540px; margin-left: auto; margin-right: auto;
+  opacity: 1; transform: translateY(0);
+  transition: opacity .8s ease .4s, transform .8s ease .4s;
+}
+
+.closing-title, .closing-sub { opacity: 1; transform: translateY(0); }
+
+.sig {
+  margin-top: 56px;
+  font-family: Georgia, 'Times New Roman', serif;
+  font-size: 1.3rem;
+  color: var(--gold);
+  font-style: italic;
+  opacity: 1;
+}
+
+.sig { opacity: 1; }
+
+.sig-emails {
+  margin-top: 8px;
+  font-size: .95rem;
+  color: var(--mid);
+}
+
+</style>
+</head>
+<body>
+
+<!-- ── COVER ── -->
+<section id="cover">
+  <h1 class="hero-names" style="font-size:clamp(2.4rem, 7vw, 5.5rem);">
+    JC Profectus<br><span>GmbH i.G.</span>
+  </h1>
+  <p class="hero-tagline">Progress and success, custom-delivered by Joerg and Chris.</p>
+</section>
+
+<!-- ── WHO WE ARE ── -->
+<section id="who">
+  <div class="inner">
+    <p class="sec-eyebrow">Who we are</p>
+    <h2 class="sec-heading">Two executives.<br><em>One hatrick.</em></h2>
+    <div class="who-text" style="margin-top:60px;">
+      <p>We are <strong>Chris and Joerg</strong> — two entrepreneurial executives who have dedicated more than two decades to building, scaling, and successfully exiting Europe's leading Software-As-A-Service-Provider for Resilience.</p>
+      <p>Our approach is hands-on, data-driven, and relentlessly focused on <strong>value creation</strong>. Three exits. Three times we delivered. That's not luck — that's a <strong>playbook</strong>.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── OUR STORY ── -->
+<section id="story">
+  <div class="inner">
+    <p class="sec-eyebrow">Our story</p>
+    <h2 class="sec-heading">From <em>bootstrap</em><br>to three exits.</h2>
+
+    <div class="tl-wrap">
+
+      <div class="tl-entry">
+        <div class="tl-year">2000</div>
+        <div class="tl-events">
+          <div class="tl-event highlight">
+            <h4>F24 Founded</h4>
+            <p>Chris and Ralph bootstrap F24 from the ground up.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-entry">
+        <div class="tl-year">2006</div>
+        <div class="tl-events">
+          <div class="tl-event highlight">
+            <h4>F24 Goes Public</h4>
+            <p>IPO — F24 AG listed on the stock exchange.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-entry">
+        <div class="tl-year">2007</div>
+        <div class="tl-events">
+          <div class="tl-event">
+            <h4>European Expansion</h4>
+            <p>Foundation of four sales subsidiaries across Europe — building the pan-European footprint.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-entry">
+        <div class="tl-year">2013</div>
+        <div class="tl-events">
+          <div class="tl-event highlight">
+            <h4>First Mover: Emergency → Crisis Management</h4>
+            <p>Pioneering the shift from emergency notification to full crisis management — redefining the category.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-entry">
+        <div class="tl-year">2017</div>
+        <div class="tl-events">
+          <div class="tl-event exit-event">
+            <div class="exit-tag">🏆 Exit I</div>
+            <h4>Sold to Armira</h4>
+            <p>Ralph retires. Joerg joins as new CEO. F24 AG taken private.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-entry">
+        <div class="tl-year">2018–19</div>
+        <div class="tl-events">
+          <div class="tl-event">
+            <h4>Market Consolidation</h4>
+            <p>Acquisition of 3 assets in Europe to build the European market leader in ENS.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-entry">
+        <div class="tl-year">2020</div>
+        <div class="tl-events">
+          <div class="tl-event exit-event">
+            <div class="exit-tag">🏆 Exit II</div>
+            <h4>Sold to HG Capital</h4>
+            <p>F24 acquired by leading technology-focused PE firm HG Capital.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-entry">
+        <div class="tl-year">2021–22</div>
+        <div class="tl-events">
+          <div class="tl-event">
+            <h4>Operational Excellence</h4>
+            <p>Cost restructuring with a renowned management consultancy.</p>
+          </div>
+          <div class="tl-event">
+            <h4>Continued Acquisitions</h4>
+            <p>4 additional acquisitions spanning value chain expansion, functional expansions and AddOns.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-entry">
+        <div class="tl-year">2023</div>
+        <div class="tl-events">
+          <div class="tl-event highlight">
+            <h4>Launch: Business Service Notification</h4>
+            <p>New business launched as market leader in Scandinavia — built on merging two acquisitions.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-entry">
+        <div class="tl-year">2024</div>
+        <div class="tl-events">
+          <div class="tl-event exit-event">
+            <div class="exit-tag">🏆 Exit III</div>
+            <h4>Sold to Altor</h4>
+            <p>F24 acquired by Altor. HG Capital remains as minority partner.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-entry">
+        <div class="tl-year">2025</div>
+        <div class="tl-events">
+          <div class="tl-event">
+            <h4>Continued Growth</h4>
+            <p>2 more acquisitions. Sales acceleration in Service Notification. Major price increases in DK (+10%) and CH.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── VALUE CREATION ── -->
+<section id="value">
+  <div class="inner">
+    <p class="sec-eyebrow">What we bring to the table</p>
+    <h2 class="sec-heading">We cover all <em>levers</em><br>of the VCP playbook —<br><em>as a well-oiled team.</em></h2>
+    <div class="levers-grid">
+      <div class="lever">
+        <div class="lever-icon">🎯</div>
+        <h3>Go-to-Market Optimization</h3>
+        <p>Accelerating top-line growth through structured sales excellence.</p>
+      </div>
+      <div class="lever">
+        <div class="lever-icon">💰</div>
+        <h3>Pricing & Standard Increases</h3>
+        <p>Systematic pricing strategy to capture full market value.</p>
+      </div>
+      <div class="lever">
+        <div class="lever-icon">🏗️</div>
+        <h3>Centralization & Nearshoring</h3>
+        <p>Structural efficiency through smart org design.</p>
+      </div>
+      <div class="lever">
+        <div class="lever-icon">✂️</div>
+        <h3>Cost Cutting</h3>
+        <p>Disciplined cost management without compromising growth.</p>
+      </div>
+      <div class="lever">
+        <div class="lever-icon">🚀</div>
+        <h3>Innovation</h3>
+        <p>Product-led growth and new market creation.</p>
+      </div>
+      <div class="lever">
+        <div class="lever-icon">🤝</div>
+        <h3>M&amp;A</h3>
+        <p>14 acquisitions — a repeatable, proven engine.</p>
+      </div>
+      <div class="lever">
+        <div class="lever-icon">🔗</div>
+        <h3>PMI</h3>
+        <p>Post-merger integration expertise to unlock synergies fast.</p>
+      </div>
+      <div class="lever">
+        <div class="lever-icon">🔄</div>
+        <h3>Customer Migration</h3>
+        <p>Seamless platform migration at scale.</p>
+      </div>
+      <div class="lever">
+        <div class="lever-icon">🗺️</div>
+        <h3>3-Year & VCP Planning</h3>
+        <p>Long-range strategic planning anchored to value creation.</p>
+      </div>
+      <div class="lever">
+        <div class="lever-icon">🏁</div>
+        <h3>Exit Management</h3>
+        <p>Three successful exits. We know how to prepare, time, and execute.</p>
+      </div>
+      <div class="lever">
+        <div class="lever-icon">🤖</div>
+        <h3>GenAI</h3>
+        <p>We leverage GenAI to boost productivity in all areas and innovate / disrupt our offerings.</p>
+      </div>
+      <div class="lever">
+        <div class="lever-icon">🌟</div>
+        <h3>Vision, Mission, Values & Beliefs</h3>
+        <p>Inspire the best possible team by providing purpose and clear guiding principles.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── REFERENCES (vorerst ausgeblendet, bis Kunden-Zitate vorliegen) ──
+<section id="references">
+  <div class="inner">
+    <p class="sec-eyebrow">References</p>
+    <h2 class="sec-heading">What others<br><em>say about us.</em></h2>
+    <div class="ref-grid">
+      <div class="ref-card">
+        <div class="ref-quote">[Zitat hier einfügen]</div>
+        <div class="ref-name">[Name]</div>
+        <div class="ref-title">[Unternehmen / Rolle]</div>
+      </div>
+      <div class="ref-card" style="transition-delay:.15s">
+        <div class="ref-quote">[Zitat hier einfügen]</div>
+        <div class="ref-name">[Name]</div>
+        <div class="ref-title">[Unternehmen / Rolle]</div>
+      </div>
+      <div class="ref-card" style="transition-delay:.3s">
+        <div class="ref-quote">[Zitat hier einfügen]</div>
+        <div class="ref-name">[Name]</div>
+        <div class="ref-title">[Unternehmen / Rolle]</div>
+      </div>
+      <div class="ref-card" style="transition-delay:.45s">
+        <div class="ref-quote">[Zitat hier einfügen]</div>
+        <div class="ref-name">[Name]</div>
+        <div class="ref-title">[Unternehmen / Rolle]</div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+
+<!-- ── CLOSING ── -->
+<section id="closing">
+  <div class="closing-inner">
+    <h2 class="closing-title">Ready for<br><span>Exit IV?</span></h2>
+    <p class="closing-sub">We've done it three times. The playbook is proven. The team is experienced, motivated and well-synchronized. Let's build something excellent — together.</p>
+    <div class="sig">Chris &amp; Joerg</div>
+    <div class="sig-emails"><a href="mailto:chris@jcprofectus.com" style="color:inherit;text-decoration:none;">chris@jcprofectus.com</a> &middot; <a href="mailto:joerg@jcprofectus.com" style="color:inherit;text-decoration:none;">joerg@jcprofectus.com</a></div>
+    <div style="margin-top:20px;"><a href="impressum.html" style="color:var(--mid);font-size:.85rem;text-decoration:none;">Impressum</a></div>
+  </div>
+</section>
+
+
+</body>
+</html>
