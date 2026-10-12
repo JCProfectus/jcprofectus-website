@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JC Profectus GmbH i.G. – Chris & Joerg</title>
+<title>JC Profectus GmbH – Chris & Joerg</title>
 <meta name="description" content="JC Profectus – Progress and success, custom-delivered by Joerg and Chris. Two entrepreneurial executives with a proven track record: three successful exits at F24 AG.">
 <meta property="og:title" content="JC Profectus – Chris & Joerg">
 <meta property="og:description" content="Progress and success, custom-delivered by Joerg and Chris.">
@@ -80,6 +80,15 @@ body {
   background: var(--gold);
   animation: blink 1.8s ease-in-out infinite;
 }
+
+.cover-logo {
+  width: clamp(84px, 10vw, 130px);
+  margin-bottom: 40px;
+  position: relative;
+  filter: drop-shadow(0 0 24px rgba(201,168,76,.25));
+}
+
+.cover-logo svg { display: block; width: 100%; height: auto; }
 
 @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.2} }
 
@@ -525,8 +534,26 @@ td {
 
 <!-- ── COVER ── -->
 <section id="cover">
+  <div class="cover-logo" aria-hidden="true">
+    <svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="cover-logo-gold" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#C9A84C"/>
+          <stop offset="50%" stop-color="#E8C97A"/>
+          <stop offset="100%" stop-color="#C9A84C"/>
+        </linearGradient>
+      </defs>
+      <circle cx="110" cy="110" r="110" fill="#0C0C0C"/>
+      <circle cx="110" cy="110" r="97" fill="none" stroke="url(#cover-logo-gold)" stroke-width="1.5" opacity="0.45"/>
+      <rect x="55" y="130" width="20" height="40" rx="3" fill="url(#cover-logo-gold)"/>
+      <rect x="90" y="100" width="20" height="70" rx="3" fill="url(#cover-logo-gold)"/>
+      <rect x="125" y="70" width="20" height="100" rx="3" fill="url(#cover-logo-gold)"/>
+      <polyline points="65,150 100,120 135,90 158,68" fill="none" stroke="#E8C97A" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+      <polygon points="158,68 143,70 152,83" fill="#E8C97A"/>
+    </svg>
+  </div>
   <h1 class="hero-names" style="font-size:clamp(2.4rem, 7vw, 5.5rem);">
-    JC Profectus<br><span>GmbH i.G.</span>
+    JC Profectus<br><span>GmbH</span>
   </h1>
   <p class="hero-tagline">Progress and success, custom-delivered by Joerg and Chris.</p>
 </section>
